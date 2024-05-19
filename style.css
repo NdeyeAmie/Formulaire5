@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+
+  .container-parent {
+    margin: 0 auto;
+    width: 60%;
+    border: 1px solid;
+  }
+
+.container {
+  width: 100%;
+    display: flex;
+    align-items: center; 
+    gap: 2rem;   
+}
+
+.img-container img {
+  width: 20rem;
+  height: 500px;
+}
+
+form {
+  width: 70%;
+  max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    gap: 30px;
+    max-height: 500px;
+   /* margin-bottom: 1rem; */
+}
+
+.form-control {
+  width: 100%;
+  height: 2rem;
+  display: block;
+  color: #495057;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+} 
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem #45a049;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+ .gender-box{
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.gender input[type="radio"] {
+  accent-color: rgba(130, 106, 251);
+  /* accent-color: rgba(45, 185, 135); */
+}
+ :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+ 
+.group {
+  align-items: center;
+}
+
+#reference-label {
+  /* display: grid; */
+  grid-template-columns: auto auto;
+}
+
+#payement-label {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.last-name{
+  position: relative;
+
+}
+
+#last-name{
+  border: 1px solid red;
+}
+
+#signal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 10rem;
+  color: red;
+  font-size: 30px;
+}
+
+.detail {
+  justify-self: end;
+  text-decoration: underline;
+}
+
+.payement {
+  justify-self: end;
+  text-decoration: underline;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-box {
+  height: auto;
+  width: auto;
+  margin: 10px;
+}
+
+.progress {
+  position: relative;
+  width: 390px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 35px;
+}
+
+.progress-bar {
+  background-color: #2db987;
+ border-radius: 35px;
+ 
+}
+
+.progress-number{
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background-color: #2db987;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.bar-1{
+  width: 390px;
+  height: 10px;
+animation: bar-1 2s ease-in-out;
+}
+.num-1{
+  top: -7.5px;
+  left: calc(60% - 25px);
+  animation: num-1 2s ease-in-out;
+}
+
+span {
+  margin-top: -10px;
+}
+
+@keyframes bar-1 {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }
+} 
+
+@keyframes num-1  {
+  0% {
+    left: -25px;
+  }
+ 100%{
+  left: calc(60% -25px);
+ }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 16rem;
+}
+
+.btn button {
+  margin-top: -1.5rem;
+  width: 80px;
+  height: 40px;
+}
+
+.btn1 {
+  background-color: #2db987; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn2{
+  border: 1px solid #2db987;
+  border-radius: 6px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .container-parent {
+    margin: 0 auto;
+    width: 90%;
+    border: 1px solid;
+  }
+
+.container {
+
+    display:block;
+    align-items: center; 
+    gap: 2rem;   
+}
+
+.img-container img {
+
+  width: 48rem;
+  height: 500px;
+}
+
+form {
+  margin: 5px;
+display: flex;
+justify-content: center;
+width: 100%;
+margin-left: -2rem;
+}
+
+.gender-box{
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.radio {
+  width: 160%;
+  display: flex;
+  align-items: center;
+}
+}
