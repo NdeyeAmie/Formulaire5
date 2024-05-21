@@ -6,12 +6,20 @@
     font-family: 'Manrope', sans-serif;
     font-size: 10px;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 40px;
+    min-height: 100vh;
   }
 
   .container-parent {
     margin: 0 auto;
-    width: 60%;
+    width: 65%;
     border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
   }
 
 .container {
@@ -34,6 +42,7 @@ form {
     padding: 0 10px;
     gap: 30px;
     max-height: 500px;
+    /* border: 1px solid; */
    /* margin-bottom: 1rem; */
 }
 
@@ -76,8 +85,8 @@ label {
 }
 
 .gender input[type="radio"] {
-  accent-color: rgba(130, 106, 251);
-  /* accent-color: rgba(45, 185, 135); */
+  /* accent-color: rgba(130, 106, 251); */
+  accent-color: rgba(45, 185, 135);
 }
  :where(.gender input, .gender label) {
   cursor: pointer;
@@ -147,20 +156,17 @@ label {
 .progress-bar {
   background-color: #2db987;
  border-radius: 35px;
- 
+ width: 200px;
 }
 
 .progress-number{
   position: absolute;
-  width: 40px;
+  width: 50px;
   height: 30px;
   background-color: #2db987;
-  font-size: 16px;
-  text-align: center;
-  line-height: 50px;
+  line-height: 30px;
   color: #fff;
   font-weight: 600;
-  letter-spacing: 1px;
   font-size: 12px;
 }
 
@@ -171,13 +177,15 @@ animation: bar-1 2s ease-in-out;
 }
 .num-1{
   top: -7.5px;
+  /* width: 30px;
+  height: 50px; */
   left: calc(60% - 25px);
   animation: num-1 2s ease-in-out;
 }
 
-span {
+/* span {
   margin-top: -10px;
-}
+} */
 
 @keyframes bar-1 {
   0%{
@@ -193,7 +201,7 @@ span {
     left: -25px;
   }
  100%{
-  left: calc(60% -25px);
+  left: calc(70% -25px);
  }
 }
 
@@ -203,6 +211,7 @@ span {
   align-items: center;
   gap: 1rem;
   margin-left: 16rem;
+  margin-top: 10px;
 }
 
 .btn button {
@@ -229,43 +238,76 @@ span {
   }
 }
 @media (max-width: 768px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   .container-parent {
-    margin: 0 auto;
-    width: 90%;
-    border: 1px solid;
+    width: 96%;
+    border: 1px solid red;
+  min-width: 900px;
+
   }
 
 .container {
-
-    display:block;
-    align-items: center; 
-    gap: 2rem;   
+  width: 100%;
+    display:inline-block;
+    max-width: 900px;
+    /* align-items: center;   */
 }
 
 .img-container img {
-
-  width: 48rem;
+  min-width: 900px;
+  width: 38rem;
   height: 500px;
 }
 
 form {
-  margin: 5px;
 display: flex;
-justify-content: center;
-width: 100%;
-margin-left: -2rem;
+max-width: 450px;
+min-width: 100px;
+width: 110%;
+
 }
 
+.form-control {
+  width: 80%;
+  height: 2rem;
+  display: block;
+} 
+
 .gender-box{
-  margin-top: 20px;
-  display: flex;
-  column-gap: 10px;
-  width: 100%;
+  margin-top: 10px;
+ display: flex;
 }
 
 .radio {
-  width: 160%;
-  display: flex;
-  align-items: center;
+  width: 20%;
+  display: block;
+}
+
+#signal {
+  position: absolute;
+  margin-top: -1rem;
+}
+
+.progress-box {
+  margin-left: -4rem;
+}
+.progress {
+  position: relative;
+  width: 300px;
+  height: 10px;
+}
+
+.progress-bar {
+  background-color: #2db987;
+ border-radius: 35px;
+ width: 200px;
+}
+.btn{
+  margin-top: 20px;
 }
 }
