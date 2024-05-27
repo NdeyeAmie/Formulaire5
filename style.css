@@ -217,6 +217,11 @@ label {
   flex-direction: column;
 }
 
+.img-container img {
+  width: 20rem;
+  height: auto;
+}
+
 form {
     display: flex;
     max-height: 500px;
