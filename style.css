@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
   }
   
   body {
@@ -13,13 +14,11 @@
 
   .container-parent {
     margin: 0 auto;
-    width: 65%;
+    width: 63%;
     border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
   }
 
 .container {
@@ -124,12 +123,7 @@ label {
   font-size: 30px;
 }
 
-.detail {
-  justify-self: end;
-  text-decoration: underline;
-}
-
-.payement {
+.detail, .payement {
   justify-self: end;
   text-decoration: underline;
 }
@@ -139,70 +133,39 @@ label {
     font-weight: bold;
 }
 
-.progress-box {
-  height: auto;
-  width: auto;
-  margin: 10px;
+.container-bar .progress-bar{
+  width: 23rem;
+  height: 4px;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: gray;
 }
-
-.progress {
+.progress-bar .bar{
   position: relative;
-  width: 390px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 35px;
-}
-
-.progress-bar {
+  display: block;
+  height: 100%;
+  width: 53%;
+  border-radius: 6px;
   background-color: #2db987;
- border-radius: 35px;
- width: 200px;
+  animation: progress 4s;
 }
-
-.progress-number{
-  position: absolute;
-  width: 50px;
-  height: 30px;
-  background-color: #2db987;
-  line-height: 30px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.bar-1{
-  width: 390px;
-  height: 10px;
-animation: bar-1 2s ease-in-out;
-}
-.num-1{
-  top: -7.5px;
-  /* width: 30px;
-  height: 50px; */
-  left: calc(60% - 25px);
-  animation: num-1 2s ease-in-out;
-}
-
-/* span {
-  margin-top: -10px;
-} */
-
-@keyframes bar-1 {
+@keyframes progress {
   0%{
-    width: 0%;
+      width: 0;
   }
-  100%{
-    width: 60%;
-  }
-} 
-
-@keyframes num-1  {
-  0% {
-    left: -25px;
-  }
- 100%{
-  left: calc(70% -25px);
- }
+}
+.progress-bar .title-bar{
+  position: absolute;
+  right: -14px;
+  top: -10px;
+  font-size: 12px;
+  background: #2db987;
+  color: white;
+  height: 1rem;
+  padding: 2px 6px;
+}
+.title-bar{
+  position: absolute;
 }
 
 .btn {
@@ -242,72 +205,39 @@ animation: bar-1 2s ease-in-out;
   body {
     margin: 0;
     padding: 0;
+
   }
 
   .container-parent {
-    width: 96%;
-    border: 1px solid red;
-  min-width: 900px;
-
+    border: none;
   }
 
 .container {
-  width: 100%;
-    display:inline-block;
-    max-width: 900px;
-    /* align-items: center;   */
-}
-
-.img-container img {
-  min-width: 900px;
-  width: 38rem;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 form {
-display: flex;
-max-width: 450px;
-min-width: 100px;
-width: 110%;
-
+    display: flex;
+    max-height: 500px;
 }
 
-.form-control {
-  width: 80%;
-  height: 2rem;
-  display: block;
-} 
-
-.gender-box{
-  margin-top: 10px;
- display: flex;
+.container-bar .progress-bar{ 
+  margin-top: 1.5rem;
 }
 
-.radio {
-  width: 20%;
-  display: block;
+.progress-bar .title-bar{
+  position: absolute;
+  height: 2rem;  
 }
 
 #signal {
   position: absolute;
-  margin-top: -1rem;
+  margin-top: -1rem; 
 }
 
-.progress-box {
-  margin-left: -4rem;
-}
-.progress {
-  position: relative;
-  width: 300px;
-  height: 10px;
-}
-
-.progress-bar {
-  background-color: #2db987;
- border-radius: 35px;
- width: 200px;
-}
-.btn{
-  margin-top: 20px;
+.btn {
+  margin-left: 3rem;
+  margin-top: -0.2em;
 }
 }
